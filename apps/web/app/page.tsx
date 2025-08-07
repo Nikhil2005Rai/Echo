@@ -5,6 +5,11 @@ import { useMutation, useQuery, Authenticated, Unauthenticated } from "convex/re
 import { api } from "@workspace/backend/_generated/api"
 import { Button } from "@workspace/ui/components/button";
 
+/**
+ * Renders the main page, displaying user data and actions based on authentication status.
+ *
+ * When authenticated, shows a user account button, a button to add a user, and a formatted list of users. When unauthenticated, prompts the user to sign in.
+ */
 export default function Page() {
   const users = useQuery(api.users.getMany)
   const addUser = useMutation(api.users.add)

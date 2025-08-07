@@ -14,6 +14,13 @@ const fontMono = Geist_Mono({
   variable: "--font-mono",
 })
 
+/**
+ * Defines the root layout for the application, applying global fonts, styles, and context providers.
+ *
+ * Wraps all child components with authentication and additional context providers to ensure consistent styling and context availability throughout the app.
+ *
+ * @param children - The content to be rendered within the layout
+ */
 export default function RootLayout({
   children,
 }: Readonly<{
